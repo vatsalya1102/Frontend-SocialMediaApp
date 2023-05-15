@@ -11,7 +11,6 @@ const Posts = ({ setCurrentId, currentId }) => {
     const posts = useSelector((state) => state.posts);
     //state.posts because in index.js of reducers we are exporting posts
     
-
     useEffect(() => {
         console.log(posts);
     }, [currentId])
