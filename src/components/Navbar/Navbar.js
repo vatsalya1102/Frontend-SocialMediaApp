@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { AppBar, Avatar, Button, Toolbar, Typography } from '@material-ui/core'
 import useStyles from './styles'
-import socialmedia from '../../images/socialmedia.jpg'
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useNavigate, useLocation } from 'react-router-dom';
 import decode from 'jwt-decode';
+import AutoAwesomeIcon from '@material-ui/icons/MonochromePhotos';
 
 const Navbar = () => {
     const classes = useStyles();
@@ -32,10 +32,9 @@ const Navbar = () => {
     }
 
     return (
-        <AppBar className={classes.appBar} position='static' color='inherit'>
+        <AppBar className={classes.appBar} position='static' color='primary'>
             <div className={classes.brandContainer}>
-                <Typography component={Link} to='/' className={classes.heading} variant='h2' align='center'>The Social Media App</Typography>
-                <img className={classes.image} src={socialmedia} alt='The Social Media App' height='60' />
+                <Typography component={Link} to='/' className={classes.heading} variant='h5' align='center'>Snapshot<AutoAwesomeIcon className={classes.icon} /></Typography>   
             </div>
             <Toolbar className={classes.toolbar}>
                 {user ? (
@@ -45,7 +44,7 @@ const Navbar = () => {
                         <Button variant='contained' className={classes.logout} color='secondary' onClick={logout}>Logout</Button>
                     </div>
                 ) : (
-                    <Button component={Link} to='/auth' variant='contained' color='primary'>Sign-in</Button>
+                    <Button component={Link} to='/auth' variant='contained' color='secondary'>Sign-in</Button>
                 )}
             </Toolbar>
         </AppBar>

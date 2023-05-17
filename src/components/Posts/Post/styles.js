@@ -2,8 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles({
     media: {
-        height: 0,
-        paddingTop: '56.25%',
+        height: 150,
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
         backgroundBlendMode: 'darken',
     },
@@ -20,6 +19,7 @@ export default makeStyles({
         borderRadius: '15px',
         height: '100%',
         position: 'relative',
+        boxShadow: '11px 17px 41px -16px rgba(168,103,99,0.97)',
     },
     overlay: {
         position: 'absolute',

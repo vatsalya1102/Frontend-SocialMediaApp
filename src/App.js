@@ -7,12 +7,14 @@ import {
 } from 'react-router-dom'
 import Home from './components/Home/Home'
 import { Auth } from './components/Auth/Auth'
+import useStyles from './styles'
 
 export default function App() {
+    const classes = useStyles();
 
     return (
         <Router>
-            <Container maxWidth='xl'>
+            <Container maxWidth='false' className={classes.navbarWidth}>
                 <Navbar />
                 <Routes>
                     <Route exact path='/' element={<Home />} />
